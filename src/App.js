@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChakraProvider, Box, extendTheme } from '@chakra-ui/react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -18,12 +18,12 @@ function App() {
       <Router>
         <Navbar />
         <Box maxW="1200px" mx="auto" p={4}>
-          <Switch>
+          <Routes>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/services" component={Services} />
             <Route path="/contact" component={Contact} />
-          </Switch>
+          </Routes>
         </Box>
       </Router>
     </ChakraProvider>
