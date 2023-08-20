@@ -1,9 +1,11 @@
 import React from 'react'
-import { Box, Heading, SimpleGrid, Flex, Text, Button } from '@chakra-ui/react';
+import { Box, Heading, SimpleGrid, Flex, Text, Button, Image } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 // COMPONENTS
 import HeroArea from '../components/HeroArea';
 import ServiceCard from '../components/ServiceCard';
+import PortfolioSection from '../components/PortfolioSection';
+import Footer from '../components/Footer';
 
 const Home = () => {
   const services = [
@@ -55,6 +57,31 @@ const Home = () => {
           </Button>
       </Flex>
       {/* Banner Section */}
+
+      {/* Portfolio Section */}
+      <PortfolioSection />
+      {/* Portfolio Section */}
+
+      {/* About Us (Summarized) */}
+      <Box bg="teal.500" color="white" py={12}>
+        <Flex maxW="1200px" mx="auto" flexDirection={{ base: 'column', md: 'row' }} alignItems="center">
+          <Box flex="1" p={4} pr={{ base: 0, md: 4 }}>
+            <Text fontSize={{ base: 'lg', md: 'xl' }} mb={4}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut ex non ex egestas
+              fermentum. Sed tincidunt odio eu neque consectetur, ac sollicitudin arcu tempus. Fusce
+              sit amet dui nec ex feugiat elementum a ut ante.
+            </Text>
+          </Box>
+          <Box flex="1" p={4}>
+            <Image src="/path/to/about_image.jpg" alt="About Us" w="100%" h="auto" borderRadius="md" />
+          </Box>
+        </Flex>
+      </Box>
+    {/* About Us (Summarized) */}
+
+    {/* Footer Section */}
+    <Footer />
+    {/* Footer Section */}
     </div>
   );
 };
