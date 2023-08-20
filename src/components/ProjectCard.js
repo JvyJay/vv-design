@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, ButtonGroup, Button } from '@chakra-ui/react'
 
-export default function CardComponent() {
+export default function ProjectCard() {
   return (
     <Card maxW='sm'>
         <CardBody>
