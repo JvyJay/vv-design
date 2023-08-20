@@ -25,8 +25,8 @@ const Navbar = () => {
               <MenuItem as={RouterLink} to="/about" color="teal.500">
                 About
               </MenuItem>
-              <MenuItem as={RouterLink} to="/services" color="teal.500">
-                Services
+              <MenuItem as={RouterLink} to="/portfolio" color="teal.500">
+                Portfolio
               </MenuItem>
               <MenuItem as={RouterLink} to="/contact" color="teal.500">
                 Contact
