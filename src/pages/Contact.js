@@ -1,7 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { Box, Heading } from '@chakra-ui/react';
+// COMPONENTS
+import ContactForm from '../components/ContactForm';
+import Footer from '../components/Footer';
 
-export default function Contact() {
+const Contact = () => {
   return (
-    <div>Contact</div>
-  )
-}
+    <Box>
+      <Heading as="h2" size="xl" textAlign="center" py={8}>
+        Contact Us
+      </Heading>
+      <Box maxW="400px" mx="auto">
+        <ContactForm />
+      </Box>
+      <Footer />
+    </Box>
+  );
+};
+
+export default Contact;
