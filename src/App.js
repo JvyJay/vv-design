@@ -17,7 +17,7 @@ function App() {
     <ChakraProvider theme={theme}>
       <Router>
         <Navbar />
-        <Box maxW="1200px" mx="auto" p={4}>
+        <Box maxW="100%" mx="auto">
           <Routes>
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />

@@ -23,7 +23,7 @@ const portfolioData = [
 
 const PortfolioSection = () => {
   return (
-    <Box py={12}>
+    <Box maxW="1200px" mx="auto" py={12}>
       <Heading as="h2" size="xl" textAlign="center" mb={6}>
         Portfolio
       </Heading>

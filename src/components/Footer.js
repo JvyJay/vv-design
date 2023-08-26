@@ -1,6 +1,8 @@
 import React from 'react';
 import { Box, Flex, Image, Link, Text, VStack, Icon } from '@chakra-ui/react';
 import { IoLogoFacebook, IoLogoTwitter, IoLogoInstagram } from 'react-icons/io';
+// IMAGES
+import logo from '../img/invert-logo.png'
 
 
 const Footer = () => {
@@ -8,7 +10,7 @@ const Footer = () => {
     <Box bg="gray.900" color="white" py={10}>
       <Flex maxW="1200px" mx="auto" justifyContent="space-between" alignItems="flex-start">
         <Box flex="1">
-          <Image src="/path/to/logo.png" alt="Logo" w="100px" h="auto" mb={4} />
+          <Image src={logo} alt="Logo" w="100px" h="auto" mb={4} />
           <Text fontSize="sm" mb={4}>
             123 Main Street, City, Country
           </Text>
