@@ -19,7 +19,7 @@ const Navbar = () => {
             ☰
             </MenuButton>
             <MenuList>
-              <MenuItem as={RouterLink} to="/home" color="teal.500">
+              <MenuItem as={RouterLink} to="/" color="teal.500">
                 Home
               </MenuItem>
               <MenuItem as={RouterLink} to="/about" color="teal.500">

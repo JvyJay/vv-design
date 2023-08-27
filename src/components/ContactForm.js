@@ -3,7 +3,7 @@ import { Box, Button, FormControl, FormLabel, Input, Textarea, VStack } from '@c
 
 const ContactForm = () => {
   return (
-    <Box p={6} bg="white" borderRadius="md" boxShadow="md">
+    <Box mb={6} p={6} bg="white" borderRadius="md" boxShadow="md">
       <VStack spacing={4}>
         <FormControl id="name">
           <FormLabel>Name</FormLabel>

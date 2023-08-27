@@ -6,6 +6,8 @@ import HeroArea from '../components/HeroArea';
 import ServiceCard from '../components/ServiceCard';
 import PortfolioSection from '../components/PortfolioSection';
 import Footer from '../components/Footer';
+// IMAGES
+import tacoma from '../img/tacoma.jpg';
 
 const Home = () => {
   const services = [
@@ -42,12 +44,12 @@ const Home = () => {
       <Flex
         bg="teal.500"
         color="white"
-        py={4}
+        p={10}
         flexDirection="column"
         justify="center" // Horizontally center
         align="center" // Vertically center
       >
-        <Text fontSize="lg">
+        <Text mb="4" fontSize="lg">
           Want to learn more about our services?{' '}
         </Text>
         <Button>
@@ -73,7 +75,7 @@ const Home = () => {
             </Text>
           </Box>
           <Box flex="1" p={4}>
-            <Image src="/path/to/about_image.jpg" alt="About Us" w="100%" h="auto" borderRadius="md" />
+            <Image src={tacoma} alt="About Us" w="100%" h="auto" borderRadius="md" />
           </Box>
         </Flex>
       </Box>
