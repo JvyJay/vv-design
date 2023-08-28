@@ -1,6 +1,7 @@
 import React from 'react'
-import { Box, Heading, SimpleGrid, Flex, Text, Button, Image } from '@chakra-ui/react';
+import { Box, Heading, SimpleGrid, Flex, Text, Button, Image, Icon } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
+import { BsCodeSlash, BsBrush, BsMegaphone } from 'react-icons/bs';
 // COMPONENTS
 import HeroArea from '../components/HeroArea';
 import ServiceCard from '../components/ServiceCard';
@@ -14,14 +15,17 @@ const Home = () => {
     {
       title: 'Web Design',
       description: 'We create beautiful and responsive web designs that engage users.',
+      icon: <Icon as={BsCodeSlash} w={6} h={6} />,
     },
     {
       title: 'Graphic Design',
       description: 'Our expert designers create stunning visual identities and graphics.',
+      icon: <Icon as={BsBrush} w={6} h={6} />,
     },
     {
       title: 'Digital Marketing',
       description: 'We help you reach your target audience and grow your online presence.',
+      icon: <Icon as={BsMegaphone} w={6} h={6} />,
     },
     // Add more services here...
   ];
@@ -35,7 +39,7 @@ const Home = () => {
         </Heading>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
         {services.map((service, index) => (
-          <ServiceCard key={index} title={service.title} description={service.description} />
+          <ServiceCard key={index} title={service.title} description={service.description} icon={service.icon} />
         ))}
         </SimpleGrid>
       </Box>
@@ -69,9 +73,7 @@ const Home = () => {
         <Flex maxW="1200px" mx="auto" flexDirection={{ base: 'column', md: 'row' }} alignItems="center">
           <Box flex="1" p={4} pr={{ base: 0, md: 4 }}>
             <Text fontSize={{ base: 'lg', md: 'xl' }} mb={4}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut ex non ex egestas
-              fermentum. Sed tincidunt odio eu neque consectetur, ac sollicitudin arcu tempus. Fusce
-              sit amet dui nec ex feugiat elementum a ut ante.
+            We are a family-founded web design and development company based in Tacoma, Washington. With a passion for creativity and innovation, we're dedicated to crafting exceptional digital experiences that empower small businesses and freelancers. Our mission is to bring your unique vision to life through responsive web design, creative branding, and effective digital marketing strategies. We believe in fostering connections, providing personalized solutions, and supporting the growth of your online presence. Join us on this journey as we work together to create meaningful and impactful digital solutions that resonate with your audience.
             </Text>
           </Box>
           <Box flex="1" p={4}>

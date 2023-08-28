@@ -1,8 +1,11 @@
 import React from 'react';
 import { Box, Container, Heading, Text, VStack, Image, SimpleGrid } from '@chakra-ui/react';
+// COMPONENTS
 import TeamMemberCard from '../components/TeamMemberCard'; // Import the TeamMemberCard component
 import Footer from '../components/Footer';
+// IMAGES
 import rainier from '../img/rainier.jpg'; // Import the rainier image
+import family from '../img/family.jpg';
 
 export default function About() {
   const teamMembers = [
@@ -50,6 +53,11 @@ export default function About() {
             </Text>
           </VStack>
         </Container>
+      </Box>
+
+      {/* Image Component */}
+      <Box display="flex" justifyContent="center" mt={8}>
+        <Image src={family} alt="Childhood Family Photo" maxW="500px" />
       </Box>
 
       {/* Team Member Section */}

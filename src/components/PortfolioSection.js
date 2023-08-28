@@ -1,22 +1,29 @@
 import React from 'react';
-import { Box, Heading, SimpleGrid } from '@chakra-ui/react';
-import ProjectCard from './ProjectCard'; // Import the PortfolioCard component
+import { Box, Heading, SimpleGrid, Button } from '@chakra-ui/react';
+import ProjectCard from './ProjectCard'; // Import the ProjectCard component
+// Images
+import project1 from '../img/achilles-collective.png';
+import project2 from '../img/jjvy.png';
+import project3 from '../img/Faith-Photography.png';
 
 const portfolioData = [
   {
-    title: 'Project 1',
-    imageUrl: '/path/to/project1.jpg',
-    description: 'Description of Project 1.',
+    title: 'Achilles Collective',
+    imageUrl: project1,
+    description: 'Martial Arts Community Website',
+    link: 'https://achilles-collective.vercel.app/', // Add the link
   },
   {
-    title: 'Project 2',
-    imageUrl: '/path/to/project2.jpg',
-    description: 'Description of Project 2.',
+    title: 'jjvy (Music Portfolio)',
+    imageUrl: project2,
+    description: 'Music Producer Website',
+    link: 'https://prodbyjjvy.vercel.app/#/', // Add the link
   },
   {
-    title: 'Project 3',
-    imageUrl: '/path/to/project3.jpg',
-    description: 'Description of Project 3.',
+    title: 'F.V Photography',
+    imageUrl: project3,
+    description: 'Photographer Portfolio',
+    link: 'https://faith-photography.vercel.app/#/', // Add the link
   },
   // Add more projects...
 ];
@@ -34,7 +41,9 @@ const PortfolioSection = () => {
             title={project.title}
             imageUrl={project.imageUrl}
             description={project.description}
-          />
+            link={project.link}
+          >
+          </ProjectCard>
         ))}
       </SimpleGrid>
     </Box>
