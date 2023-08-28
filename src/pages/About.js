@@ -64,9 +64,9 @@ export default function About() {
       <Box py={12}>
         <Container maxW="xl">
           <VStack spacing={8} align="center">
-            <Heading as="h2" size="xl">
+            <Text color='teal.500' fontSize='3xl' fontWeight="bold">
               Our Team
-            </Heading>
+            </Text>
             <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8} mt={4}>
               {teamMembers.map((member, index) => (
                 <TeamMemberCard key={index} name={member.name} role={member.role} description={member.description} />

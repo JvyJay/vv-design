@@ -34,9 +34,9 @@ const Home = () => {
       <HeroArea />
       {/* Services Section */}
       <Box maxW="1200px" mx="auto" py={12}>
-        <Heading as="h2" size="xl" textAlign="center" mb={6}>
+        <Text color='teal.500' fontSize='3xl' fontWeight="bold" textAlign="center" mb={6}>
           Our Services
-        </Heading>
+        </Text>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
         {services.map((service, index) => (
           <ServiceCard key={index} title={service.title} description={service.description} icon={service.icon} />
@@ -46,17 +46,17 @@ const Home = () => {
       {/* Services Section */}
       {/* Banner Section */}
       <Flex
-        bg="teal.500"
+        bg="gray.100"
         color="white"
         p={10}
         flexDirection="column"
         justify="center" // Horizontally center
         align="center" // Vertically center
       >
-        <Text mb="4" fontSize="lg">
+        <Text color='teal.500' mb="4" fontSize="lg">
           Want to learn more about our services?{' '}
         </Text>
-        <Button>
+        <Button bg='teal.500' color='white'>
           <Link to="/contact" color="white">
             Contact us now!
           </Link>

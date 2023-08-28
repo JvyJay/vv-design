@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, SimpleGrid, Button } from '@chakra-ui/react';
+import { Box, Text, SimpleGrid, Button } from '@chakra-ui/react';
 import ProjectCard from './ProjectCard'; // Import the ProjectCard component
 // Images
 import project1 from '../img/achilles-collective.png';
@@ -31,9 +31,9 @@ const portfolioData = [
 const PortfolioSection = () => {
   return (
     <Box maxW="1200px" mx="auto" py={12}>
-      <Heading as="h2" size="xl" textAlign="center" mb={6}>
+      <Text color='teal.500' fontSize='3xl' fontWeight="bold" textAlign="center" mb={6}>
         Portfolio
-      </Heading>
+      </Text>
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
         {portfolioData.map((project, index) => (
           <ProjectCard

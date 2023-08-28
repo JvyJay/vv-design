@@ -8,9 +8,9 @@ const Contact = () => {
 
   return (
     <Box>
-      <Heading as="h2" size="xl" textAlign="center" py={8}>
+      <Text color='teal.500' fontSize='3xl' fontWeight="bold" textAlign="center" py={8}>
         Contact Us
-      </Heading>
+      </Text>
       <Flex direction={isSmallerThanMd ? "column" : "row"} justify="center">
         <Box maxW="400px" mb={isSmallerThanMd ? 4 : 0} mr={isSmallerThanMd ? 0 : 8}>
           <VStack spacing={4} alignItems={isSmallerThanMd ? "center" : "flex-start"}>
