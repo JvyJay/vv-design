@@ -9,6 +9,9 @@ import PortfolioSection from '../components/PortfolioSection';
 import Footer from '../components/Footer';
 // IMAGES
 import tacoma from '../img/tacoma.jpg';
+// REACT REVEAL COMPONENTS
+import Fade from 'react-reveal/Fade';
+import Flip from 'react-reveal/Flip';
 
 const Home = () => {
   const services = [
@@ -33,35 +36,41 @@ const Home = () => {
     <div>
       <HeroArea />
       {/* Services Section */}
-      <Box maxW="1200px" mx="auto" py={12}>
-        <Text color='teal.500' fontSize='3xl' fontWeight="bold" textAlign="center" mb={6}>
-          Our Services
-        </Text>
-        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
-        {services.map((service, index) => (
-          <ServiceCard key={index} title={service.title} description={service.description} icon={service.icon} />
-        ))}
-        </SimpleGrid>
-      </Box>
+      <Fade cascade>
+        <Box maxW="1200px" mx="auto" py={12}>
+            <Text color='teal.500' fontSize='3xl' fontWeight="bold" textAlign="center" mb={6}>
+              Our Services
+            </Text>
+            <Fade right>
+            <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
+            {services.map((service, index) => (
+              <ServiceCard key={index} title={service.title} description={service.description} icon={service.icon} />
+            ))}
+            </SimpleGrid>
+          </Fade>
+        </Box>
+      </Fade>
       {/* Services Section */}
       {/* Banner Section */}
-      <Flex
-        bg="gray.100"
-        color="white"
-        p={10}
-        flexDirection="column"
-        justify="center" // Horizontally center
-        align="center" // Vertically center
-      >
-        <Text color='teal.500' mb="4" fontSize="lg">
-          Want to learn more about our services?{' '}
-        </Text>
-        <Button bg='teal.500' color='white'>
-          <Link to="/contact" color="white">
-            Contact us now!
-          </Link>
-          </Button>
-      </Flex>
+      <Fade top>
+          <Flex
+            bg="gray.100"
+            color="white"
+            p={10}
+            flexDirection="column"
+            justify="center" // Horizontally center
+            align="center" // Vertically center
+          >
+            <Text color='teal.500' mb="4" fontSize="lg">
+              Want to learn more about our services?{' '}
+            </Text>
+            <Button bg='teal.500' color='white'>
+              <Link to="/contact" color="white">
+                Contact us now!
+              </Link>
+              </Button>
+          </Flex>
+      </Fade>
       {/* Banner Section */}
 
       {/* Portfolio Section */}
@@ -72,12 +81,16 @@ const Home = () => {
       <Box bg="teal.500" color="white" py={12}>
         <Flex maxW="1200px" mx="auto" flexDirection={{ base: 'column', md: 'row' }} alignItems="center">
           <Box flex="1" p={4} pr={{ base: 0, md: 4 }}>
-            <Text fontSize={{ base: 'lg', md: 'xl' }} mb={4}>
-            We are a family-founded web design and development company based in Tacoma, Washington. With a passion for creativity and innovation, we're dedicated to crafting exceptional digital experiences that empower small businesses and freelancers. Our mission is to bring your unique vision to life through responsive web design, creative branding, and effective digital marketing strategies. We believe in fostering connections, providing personalized solutions, and supporting the growth of your online presence. Join us on this journey as we work together to create meaningful and impactful digital solutions that resonate with your audience.
-            </Text>
+            <Flip cascade top>
+              <Text fontSize={{ base: 'lg', md: 'xl' }} mb={4}>
+              We are a family-founded web design and development company based in Tacoma, Washington. With a passion for creativity and innovation, we're dedicated to crafting exceptional digital experiences that empower small businesses and freelancers. Our mission is to bring your unique vision to life through responsive web design, creative branding, and effective digital marketing strategies. We believe in fostering connections, providing personalized solutions, and supporting the growth of your online presence. Join us on this journey as we work together to create meaningful and impactful digital solutions that resonate with your audience.
+              </Text>
+            </Flip>
           </Box>
           <Box flex="1" p={4}>
-            <Image src={tacoma} alt="About Us" w="100%" h="auto" borderRadius="md" />
+            <Fade right>
+              <Image src={tacoma} alt="About Us" w="100%" h="auto" borderRadius="md" />
+            </Fade>
           </Box>
         </Flex>
       </Box>

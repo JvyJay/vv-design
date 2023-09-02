@@ -1,10 +1,13 @@
 import React from 'react';
 import { Box, Text, SimpleGrid, Button } from '@chakra-ui/react';
 import ProjectCard from './ProjectCard'; // Import the ProjectCard component
-// Images
+// IMAGES
 import project1 from '../img/achilles-collective.png';
 import project2 from '../img/jjvy.png';
 import project3 from '../img/Faith-Photography.png';
+// REACT REVEAL
+import Fade from 'react-reveal/Fade';
+import Bounce from 'react-reveal/Bounce';
 
 const portfolioData = [
   {
@@ -31,21 +34,25 @@ const portfolioData = [
 const PortfolioSection = () => {
   return (
     <Box maxW="1200px" mx="auto" py={12}>
-      <Text color='teal.500' fontSize='3xl' fontWeight="bold" textAlign="center" mb={6}>
-        Portfolio
-      </Text>
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
-        {portfolioData.map((project, index) => (
-          <ProjectCard
-            key={index}
-            title={project.title}
-            imageUrl={project.imageUrl}
-            description={project.description}
-            link={project.link}
-          >
-          </ProjectCard>
-        ))}
-      </SimpleGrid>
+      <Fade cascade>
+        <Text color='teal.500' fontSize='3xl' fontWeight="bold" textAlign="center" mb={6}>
+          Portfolio
+        </Text>
+        <Bounce right>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
+          {portfolioData.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.title}
+              imageUrl={project.imageUrl}
+              description={project.description}
+              link={project.link}
+            >
+            </ProjectCard>
+          ))}
+        </SimpleGrid>
+        </Bounce>
+      </Fade>
     </Box>
   );
 };
